@@ -5,6 +5,6 @@ metadata:
   name: fargate-only-cluster
   region: ap-southeast-1
 fargateProfiles:
-  - name: eks-example-fargate-profile
+  - name: eksexample-fargate-profile
     selectors:
       - namespace: eks-example
