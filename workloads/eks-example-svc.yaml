@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: eks-example
   namespace: eks-example
-  service.beta.kubernetes.io/aws-load-balancer-type: "external"
-  service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "ip"
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "external"
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "ip"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
   labels:
     app: eks-example
 spec:
